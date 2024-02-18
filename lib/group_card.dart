@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class GroupCard extends StatelessWidget {
-  String title;
-  String description;
-  double price;
+  final String title;
+  final String description;
+  final double price;
 
-  GroupCard(
+  const GroupCard(
       {Key? key,
       required this.title,
       required this.price,

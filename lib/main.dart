@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:share_my_bill/GroupCard.dart';
+import 'package:share_my_bill/group_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -68,10 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     padding: const EdgeInsets.only(
                         top: 40, bottom: 40, left: 10, right: 10),
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text("Bonjour",
                             style: TextStyle(
                                 fontSize: 32,
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: double.infinity,
                   padding: const EdgeInsets.only(
                       left: 10, right: 10, top: 14, bottom: 85),
-                  child: GroupCard(
+                  child: const GroupCard(
                       title: "Vacances à Paris",
                       description: "Road-trip à Paris entre potes",
                       price: 650.00),

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:share_my_bill/components/stacked_avatars.dart';
 
-class GroupCard extends StatelessWidget {
+class TripCard extends StatelessWidget {
   final String title;
   final String description;
   final double price;
 
-  const GroupCard(
-      {Key? key,
+  const TripCard(
+      {super.key,
       required this.title,
       required this.price,
-      required this.description})
-      : super(key: key);
+      required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -30,17 +30,21 @@ class GroupCard extends StatelessWidget {
             ),
             const Padding(padding: EdgeInsets.only(bottom: 6.0)),
             Text(description, style: const TextStyle(fontSize: 14)),
-            const Padding(padding: EdgeInsets.only(bottom: 6.0)),
+            const Padding(padding: EdgeInsets.only(bottom: 10.0)),
             Row(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('${price.toStringAsFixed(2)}€'),
+                const StackedAvatars(),
                 Text(
-                  '${price.toStringAsFixed(2)}€',
-                  style: const TextStyle(fontSize: 14),
-                )
+                  '${price.toStringAsFixed(2)} €',
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF004581),
+                  ),
+                ),
               ],
             )
           ],

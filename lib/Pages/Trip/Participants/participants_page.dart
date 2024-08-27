@@ -11,21 +11,24 @@ class ParticipantsPage extends StatefulWidget {
 
 class _ParticipantsPageState extends State<ParticipantsPage> {
   List<User> participants = [
-    User(firstName: 'John', lastName: 'Doe'),
+    User(firstName: 'John', lastName: 'Doe', isAdmin: true),
     User(firstName: 'Jane', lastName: 'Doe'),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: participants.length,
-      itemBuilder: (context, index) {
-        final participant = participants[index];
-        return ParticipantListTile(
-          firstName: participant.firstName,
-          lastName: participant.lastName,
-        );
-      },
+    return Scaffold(
+      body: ListView.builder(
+        itemCount: participants.length,
+        itemBuilder: (context, index) {
+          final participant = participants[index];
+          return ParticipantListTile(user: participant);
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => null,
+        child: const Icon(Icons.person_add),
+      ),
     );
   }
 }

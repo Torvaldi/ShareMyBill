@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_my_bill/Pages/Trip/Buyings/buying_page.dart';
 import 'package:share_my_bill/Pages/Trip/Participants/participants_page.dart';
 
 class TripPage extends StatelessWidget {
@@ -28,11 +29,11 @@ class TripPage extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             Center(child: Text('Informations générales')),
             ParticipantsPage(),
-            Center(child: Text('Achats')),
+            Buyingpage(),
           ],
         ),
       ),
